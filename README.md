@@ -1,2 +1,2 @@
-# NucleotideCounter
-A simple script that outputs the count of each nucleotide base from a string.
+# Phage Projects
+A repository of my phage programming progression.
