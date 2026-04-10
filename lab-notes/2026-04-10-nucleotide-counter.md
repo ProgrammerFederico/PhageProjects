@@ -1,5 +1,5 @@
-## Project: Nucleotide Counter  
-## Focus:  Counting DNA bases  
+## Nucleotide Counter Project
+Focus: Counting DNA bases  
 
 ## Goal
 Write a program to count the A, T, G, C nucleotide bases within a sequence of DNA.

@@ -1,5 +1,5 @@
-## Project: GC Calculator
-## Focus: Calculating % GC in DNA Sequences
+## GC Calculator Project
+Focus: Calculating % GC in DNA Sequences
 
 ## Goal
 Write a program to calculate the percentage of Guanine and Cytosine within a sequence of DNA.
