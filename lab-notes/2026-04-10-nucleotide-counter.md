@@ -1,5 +1,3 @@
-
-
 **Project:** Nucleotide Counter  
 **Focus:** Counting DNA bases  
 
