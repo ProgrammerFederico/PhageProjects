@@ -7,3 +7,5 @@ A repository of my phage programming progression.
 
 - 4.10.26 - GC Content Calculator program started.
 - 4.10.26 - GC Content Calculator program finished.
+
+- 5.25.26 - FASTA Analyzer program initialized.
