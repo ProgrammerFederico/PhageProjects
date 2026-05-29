@@ -5,7 +5,7 @@ Focus: Analyzing a FASTA File
 Write a program able to receive and process given FASTA information about a phage.
 
 ## What I Did
-- WIP.
+-  First step was figuring out how to open a python file within a nearby folder. This was done using the open() function within python.
 
 ## What Worked
 - WIP.
