@@ -1,3 +1,6 @@
 with open("fastaOne.fa", "r") as file:
-    for line in file:
-        print(line.strip("\n"))
+    text = ""
+    for incorrectCharacters in textString:
+        incorrectCharacters = incorrectCharacters.replace("\n", "")
+        incorrectCharacters = incorrectCharacters.replace(">", "")
+        text = incorrectCharacters
