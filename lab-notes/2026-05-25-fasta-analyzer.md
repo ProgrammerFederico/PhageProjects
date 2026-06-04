@@ -11,7 +11,7 @@ Write a program able to receive and process given FASTA information about a phag
 - WIP.
 
 ## What Didn’t Work
-- WIP.
+- Assining "textString" as a variable seemed to confuse Python. I need to read more on loops, as well as file fundamentals (opening files, extracting text, etc).
 
 ## What I Learned
 - WIP.
