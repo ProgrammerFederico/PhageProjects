@@ -12,7 +12,7 @@ Write a program able to receive and process given FASTA information about a phag
 
 ## What Worked
 - Thinking of functions as a tool that do not know each other, but can utilize each others inputs.
-- Implementing a data flow with FASTA - > sequence - > counts - > GC - > output.
+- Implementing a data flow with FASTA -> sequence -> counts -> GC -> output.
 - Sucessfully parsed FASTA files (.fa)
 
 ## What Didn’t Work
@@ -31,4 +31,4 @@ Write a program able to receive and process given FASTA information about a phag
 - Importing functions into a project.
 
 ## Next Step
-- WIP.
+- Multi-Phage Comparison Tool.
