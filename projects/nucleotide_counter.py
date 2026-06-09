@@ -1,10 +1,9 @@
-sequence = input("Enter a DNA sequence: ")
-A = sequence.count('A')
-T = sequence.count('T')
-C = sequence.count('C')
-G = sequence.count('G')
 
-print(f"A count: {A}")
-print(f"T count: {T}")
-print(f"C count: {C}")
-print(f"G count: {G}")
+def nucleotide_counter(data):
+    sequence = data
+    A = sequence.count('A')
+    T = sequence.count('T')
+    C = sequence.count('C')
+    G = sequence.count('G')
+    sequenceList = {"A": A, "T": T, "C": C, "G": G}
+    return sequenceList

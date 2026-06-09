@@ -1,6 +1,19 @@
+from gc_calculator import gc_calculator
+from nucleotide_counter import nucleotide_counter
+
 with open("fastaOne.fa", "r") as file:
     text = ""
-    for incorrectCharacters in textString:
-        incorrectCharacters = incorrectCharacters.replace("\n", "")
-        incorrectCharacters = incorrectCharacters.replace(">", "")
-        text = incorrectCharacters
+    for raw_line in file:
+        if raw_line.startswith(">"):
+            continue
+
+        raw_line = raw_line.replace("\n", "")
+        text += raw_line
+        
+count = nucleotide_counter(text)
+print(count)
+
+gc_percent = gc_calculator(count)
+print(f"GC content: {gc_percent * 100:.2f}%")
+
+
