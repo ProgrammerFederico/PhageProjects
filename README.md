@@ -12,3 +12,6 @@ A repository of my phage programming progression.
 - 5.25.26 - FASTA Analyzer program initialized; set up parser for .fa files and planned GC%, length, nucleotide distribution features.
 - 5.29.26 - FASTA Analyzer program updated; added FASTA File input support for multi-sequence parsing.
 - 6.08.26 - Nucleotide Counter along with Guanine Cytosine Calculator modularized into functions. Logic as well as efficiency improved, FASTA Analyzer parses through \n and > within FASTA files, and successful prints count of each base, as well as GC content.
+
+- 7.10.26 - Multi Phage Analyzer program initialized; setup parser for multiple .fa files utilizing previous FASTA Analyzer.
+- 7.11.26 -

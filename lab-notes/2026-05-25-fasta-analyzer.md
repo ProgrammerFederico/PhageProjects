@@ -16,7 +16,7 @@ Write a program able to receive and process given FASTA information about a phag
 - Sucessfully parsed FASTA files (.fa)
 
 ## What Didn’t Work
-- Assining "textString" as a variable seemed to confuse Python. I need to read more on loops, as well as file fundamentals (opening files, extracting text, etc).
+- Assigning "textString" as a variable seemed to confuse Python. I need to read more on loops, as well as file fundamentals (opening files, extracting text, etc).
 - When attempting to modularize into functions, I treated DNA as a string within the GC function. However, it was really a count dictionary, which led to confusion.
 - When first attempting to call gc_calculator and nucleotide_counter, (painfully obvious now) the functions were not defined in FASTA Analyzer, so I had to import them.
 - F string formatting and purpose, f strings are mainly for putting variables inside text easily.
@@ -31,4 +31,4 @@ Write a program able to receive and process given FASTA information about a phag
 - Importing functions into a project.
 
 ## Next Step
-- Multi-Phage Comparison Tool.
+- Multi-Phage Analyzation Tool.
