@@ -7,21 +7,27 @@ Write a program able to parse multiple FASTA files provided a folder.
 ## What I Did
 - My FASTA Analyzer was hardcoded initially, so first I revamped it into a working function that accepts file path / file name input.
 - Set up loop to step through given folder path and add files with the correct extension to a list.
+- Utilized len() function to check list length. If the list is empty, inform user.
 
 ## What Worked
 - Importing other files within my functions.
+- Converted folder into list of FASTA File paths using pathlib.iterdir() and file.suffix. 
 
 ## What Didn’t Work
 - I tried to use while open to step through the given folder path, instead of first opening the contents of the folder.
+- Tried to use open() on a directory instead of first obtaining the files inside it. This resulted in the characters of the path being
+looped through instead of the files in the folder.
 
 ## What I Learned
 - Importing other files within a function is possible.
 - PathLib and how to utilize finding files / folders within a path.
-- Use iterdir
+- Attributes, Methods, Objects.
+- Path objects are not strings and require their own Path specific methods (.suffix).
 
 ## Additional Notes:
 - While developing the logic behind this program, I quickly recognized what I call "Decision Decisions". My program should only accept
 supported FASTA extensions (such as .fa or .fasta), and ignore unrelated files. If no such files are found, notify the user.
+- 
 
 
 ## Next Step
