@@ -8,26 +8,44 @@ Write a program able to parse multiple FASTA files provided a folder.
 - My FASTA Analyzer was hardcoded initially, so first I revamped it into a working function that accepts file path / file name input.
 - Set up loop to step through given folder path and add files with the correct extension to a list.
 - Utilized len() function to check list length. If the list is empty, inform user.
+- Took another detour to revamp FASTA Analyzer return a dictionary, instead of a tuple. Reason being I wanted a more stable structure when it came to scaling up the amount of information that would be processed. A dictionary provides this stability and a cleaner output. 
+- To add on, this dictionary would include the file name, and genome length.
+- Set fasta analyzer to receive full path. That way, it's responsibility will be to take the given file passed in from MPA.
+- Set up an analysis variable that utilizes generator expressions to return total number of phages analyzed, average gc content, average genome size, and gc content range.
+
 
 ## What Worked
 - Importing other files within my functions.
 - Converted folder into list of FASTA File paths using pathlib.iterdir() and file.suffix. 
+- Breaking the f string print statement into multiple lines by relocating the parenthesis.
+- Creating a list to store every dictionary returned from FASTA Analyzer.
+- Using a generator expression for loop to cycle through every dictionary with gc_content in information_list.
+
+
 
 ## What Didn’t Work
 - I tried to use while open to step through the given folder path, instead of first opening the contents of the folder.
 - Tried to use open() on a directory instead of first obtaining the files inside it. This resulted in the characters of the path being
 looped through instead of the files in the folder.
+- Trying to pass in a folder path into FASTA Analyzer instead of the file name.
+- Trying to break the f string print statement in the middle.
 
 ## What I Learned
 - Importing other files within a function is possible.
 - PathLib and how to utilize finding files / folders within a path.
 - Attributes, Methods, Objects.
 - Path objects are not strings and require their own Path specific methods (.suffix).
+- Program logic; Fasta Analyzer should have one main purpose, Multi Phage Analyzer should have one purpose.
+- Generator expressions, which allowed the program to cycle through each dictionary within information_list and extracting important information.
+- max() / min() functions.
+- Further f string syntax and how I can break the parenthesis up into multiple lines (to prevent one long print line).
+- To be more specific, learned about "," as a thousands seperator, and got a refreshor on .0f to set how 0 digits after the decimal point.
+
 
 ## Additional Notes:
 - While developing the logic behind this program, I quickly recognized what I call "Decision Decisions". My program should only accept
 supported FASTA extensions (such as .fa or .fasta), and ignore unrelated files. If no such files are found, notify the user.
-- 
+- When calculating AVG GC Content across the genomes, the f string uses a denominator which counts number of dictionaries within the list. However, it SHOULD count the number of dictionaries within the list that DO have gc content, in order to ensure a proper average.
 
 
 ## Next Step

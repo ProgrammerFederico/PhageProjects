@@ -1,9 +1,6 @@
-def fasta_analyzer(folderName, fileName):
+def fasta_analyzer(file_path):
     from gc_calculator import gc_calculator
     from nucleotide_counter import nucleotide_counter
-    from pathlib import Path
-
-    file_path = Path(f"../{folderName}") / fileName
 
     with open(file_path, "r") as file:
         text = ""
@@ -12,13 +9,18 @@ def fasta_analyzer(folderName, fileName):
                 continue
             raw_line = raw_line.replace("\n", "")
             text += raw_line
-        
+
+        phage_information = {
+            "file_name": file_path.name,
+        }
+
         count = nucleotide_counter(text)
-        print(count)
 
         gc_percent = gc_calculator(count)
+
+        phage_information["nucleotide_count"] = count
+        phage_information["gc_percentage"] = gc_percent
+        phage_information["genome_length"] = len(text)
         # print(f"GC content: {gc_percent * 100:.2f}%")
-        return count, gc_percent
+        return phage_information
         
-
-
