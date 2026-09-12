@@ -5,7 +5,7 @@ Focus: Analyzing a FASTA File
 Write a program able to receive and process given FASTA information about a phage.
 
 ## What I Did
--  First step was figuring out how to open a python file within a nearby folder. This was done using the open() function within python.
+- First step was figuring out how to open a python file within a nearby folder. This was done using the open() function within python.
 - My second goal was to figure out how to ignore the > header within FASTA Files.
 - After that was successful, I cleaned the \n from each line. 
 - Finally, I took time to modularize my other 2 programs (gc_calculator.py and nucleotide_counter.py) into useable functions, which I then called.
