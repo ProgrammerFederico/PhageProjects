@@ -11,12 +11,18 @@ def motif_finder():
 
     haystack = input("Greetings Researcher, please enter the sequence of DNA you would like analyzed: ")
     needle = input("Please enter the MOTIF: ")
+    found_flag = False
 
     if haystack in text:
-        if needle in haystack:
-            print("MOTIF identified.")
+        for i in range((len(haystack) - len(needle) + 1)):
+            if haystack[i:i + len(needle)] == needle:
+                found_flag = True
+
+        if found_flag:
+            print("MOTIF Identified.")
         else:
-            print('No MOTIF identified. :(')
+            print("No MOTIF Identified. :(")
+            
     else:
         print("No sequence found within DNA.")
     

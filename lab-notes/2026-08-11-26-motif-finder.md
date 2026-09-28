@@ -25,7 +25,8 @@ Write a program able to determine motif location and frequency from a given DNA 
 
 
 ## Additional Notes:
-
+- I replaced the "in" operator with logic. Reason being is eventually I want to have
+more control over the search, and the in operator only returns true or false.
 
 
 ## Next Step
