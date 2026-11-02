@@ -32,7 +32,9 @@ The examples below assume you are in the repository root unless otherwise specif
 
 **Source:** [`projects/nucleotide_counter.py`](../projects/nucleotide_counter.py)
 
-Counts uppercase `A`, `T`, `C`, and `G` characters in a supplied string and returns a dictionary.
+Counts uppercase `A`, `T`, `C`, and `G` characters in a supplied DNA sequence and returns a dictionary containing their respective counts.
+
+### Usage
 
 From the `projects` directory, in a Python interpreter:
 
@@ -43,13 +45,21 @@ nucleotide_counter("AATGC")
 # {'A': 2, 'T': 1, 'C': 1, 'G': 1}
 ```
 
-**Limitations:** The current implementation is case-sensitive. Lowercase bases and ambiguous symbols are not counted. It does not validate input.
+### Known Limitations
+
+- The implementation is case-sensitive; lowercase nucleotides are not counted.
+- Ambiguous nucleotide symbols (e.g., `N`) are ignored.
+- Input validation is not implemented.
+
+---
 
 ## 2. GC Calculator
 
 **Source:** [`projects/gc_calculator.py`](../projects/gc_calculator.py)
 
-Accepts a dictionary with counts for `A`, `T`, `C`, and `G`. Returns the GC **fraction** from 0 to 1, not a percentage.
+Accepts a dictionary containing nucleotide counts for `A`, `T`, `C`, and `G`. Calculates and returns the GC **fraction** between 0 and 1, rather than a percentage.
+
+### Usage
 
 From the `projects` directory, in a Python interpreter:
 
@@ -60,7 +70,13 @@ gc_calculator({"A": 1, "T": 1, "C": 1, "G": 1})
 # 0.5 (equivalent to 50%)
 ```
 
-**Limitations:** The dictionary must contain all four base keys. A total count of zero causes division by zero. The function does not validate inputs.
+### Known Limitations
+
+- The input dictionary must contain all four nucleotide keys.
+- A total nucleotide count of zero results in a division-by-zero error.
+- Input validation is not implemented.
+
+---
 
 ## 3. FASTA Analyzer
 
@@ -144,4 +160,6 @@ See [`lab-notes/index.md`](../lab-notes/index.md) for project-by-project develop
 
 ## Testing and validation
 
-Automated tests have not yet been added. The future `tests/` directory will hold checks for expected nucleotide counts, GC fractions, FASTA parsing behavior, and sequence pattern detection. Until those tests exist, treat the current tools as learning-stage implementations rather than validated research software.
+Initial automated tests are available for the Nucleotide Counter and GC Calculator in [`tests/`](../tests/). To run them, install `pytest` in your Python environment and execute `python -m pytest` from the repository root.
+
+Testing observations and mutation-testing results are documented in the corresponding lab notes. Other programs and boundary cases have not yet been comprehensively tested; treat these tools as learning-stage implementations rather than validated research software.
