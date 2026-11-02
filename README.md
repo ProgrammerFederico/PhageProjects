@@ -1,29 +1,10 @@
-# Phage Projects
-A collection of Python-based bioinformatics tools developed to explore bacteriophage genome analysis and computational biology.
-
-## Development Log
-- 4.9.26 - Nucleotide Counter program initialized; designed to parse raw DNA strings and return frequency counts of each nucleotide (A, T, G, C).
-- 4.10.26 - Nucleotide Counter completed;  computes count of nucleotide bases from raw DNA input.
-
-
-- 4.10.26 - GC Content Calculator initialized; planned GC%, sequence length calculation features.
-- 4.10.26 - GC Content Calculator completed; computes GC% from raw DNA sequences. 
-
-- 5.25.26 - FASTA Analyzer program initialized; set up parser for .fa files and planned GC%, length, nucleotide distribution features.
-- 5.29.26 - FASTA Analyzer program updated; added FASTA File input support for multi-sequence parsing.
-- 6.08.26 - Nucleotide Counter along with Guanine Cytosine Calculator modularized into functions. Logic as well as efficiency improved, FASTA Analyzer parses through \n and > within FASTA files, and successful prints count of each base, as well as GC content.
-
-- 7.10.26 - Multi Phage Analyzer program initialized; setup parser for multiple .fa files utilizing previous FASTA Analyzer.
-- 8.10.26 - Multi Phage Analyzer completed; program can now discover .fa/.fasta files from a provided folder, analyze each genome using FASTA Analyzer,
-and return basic statistics including total phage count, average GC content, average genome size, and GC range.
-
 # PhageProjects
 
 **Python-based bioinformatics tools for bacteriophage genome analysis and computational biology.**
 
 ## Overview
 
-PhageProjects documents my progression in Python programming and bioinformatics through the development of tools for analyzing bacteriophage DNA sequences.
+PhageProjects documents my dynamic progression in Python programming and bioinformatics through the development of tools for analyzing bacteriophage DNA sequences.
 
 The project began with foundational tasks such as nucleotide counting in addition to GC content calculation, and has progressively expanded into FASTA parsing, multi-genome analysis, and DNA sequence pattern detection.
 
@@ -77,7 +58,7 @@ Extended single-genome analysis to collections of FASTA files, enabling aggregat
 
 Processes multiple FASTA files from a directory and summarizes average GC content, GC range, average genome length, and total genomes analyzed.
 
-[Source Code](projects/multi_phage_analyzer.py) · [Development Notes](lab-notes/2026-07-11-26-multi-phage-analyzer)
+[Source Code](projects/multi_phage_analyzer.py) · [Development Notes](lab-notes/2026-07-11-multi-phage-analyzer.md)
 
 ### 03. Sequence Pattern Analysis
 
@@ -89,7 +70,7 @@ Explores DNA sequence patterns and fixed-length nucleotide subsequences as a fou
 
 Detects specified DNA motifs within a user-selected sequence using sliding-window matching.
 
-[Source Code](projects/motif_finder.py) · [Development Notes](lab-notes/2026-08-11-26-motif-finder.md)
+[Source Code](projects/motif_finder.py) · [Development Notes](lab-notes/2026-08-11-motif-finder.md)
 
 *Status: V1 implemented; V2 planned.*
 
@@ -142,7 +123,7 @@ Follow the terminal prompt to provide a directory containing `.fa` or `.fasta` g
 
 The Nucleotide Counter, GC Calculator, and FASTA Analyzer are implemented as reusable Python functions rather than standalone interactive programs.
 
-For detailed input requirements, usage examples, and known limitations, see the planned [Usage Guide](docs/usage.md).
+For detailed input requirements, usage examples, and known limitations, see the [Usage Guide](docs/usage.md).
 
 ---
 
@@ -166,9 +147,10 @@ PhageProjects/
 │   ├── index.md
 │   └── [individual project notes]
 │
+├── tests/
 ├── data/
-├── docs/                  # Planned
-│   └── usage.md           # Planned
+├── docs/                  
+│   └── usage.md           
 │
 └── README.md
 ```
@@ -212,6 +194,6 @@ Extend motif analysis, complete k-mer extraction, and introduce automated valida
 - Extend Motif Finder to support whole-genome and region-specific searches, occurrence positions, frequency counting, and input validation.
 - Complete the K-mer Frequency Analyzer.
 - Introduce automated tests and improve reproducibility.
-- Develop BPAGE ML V1 for bacterial host classification.
+- Develop BHAGE ML V1 for bacterial host classification.
 
 The project is actively evolving as new bioinformatics concepts and research methods are explored.
